@@ -323,7 +323,7 @@ def show_prediction(
             bar_colors.append("#4CAF50")
 
         else:
-            bar_colors.append("#B0B0B0")
+            bar_colors.append("#CFD8DC")
 
     
     # BARPLOT
@@ -334,11 +334,8 @@ def show_prediction(
     )
 
     axes[1].invert_yaxis()
-
     axes[1].set_xlim(0, 100)
-
     axes[1].set_xlabel("Sannolikhet (%)")
-
     axes[1].set_title(
         f"Topp {top_n} prediktioner",
         fontsize=13,
@@ -347,9 +344,7 @@ def show_prediction(
 
     # PROCENTTEXT
     for bar in bars:
-
         width = bar.get_width()
-
         axes[1].text(
             width + 1,
             bar.get_y() + bar.get_height()/2,
